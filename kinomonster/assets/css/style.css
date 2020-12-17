@@ -1,0 +1,511 @@
+* {  /*это нужно что бы нигде небыло отступов, задается команда для всех файлов*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #555;
+}
+
+p {
+    padding: 0 0 20px 0;
+    line-height: 1.7em;
+}
+
+input[type="text"], input[type="password"], input[type="search"] {
+    color: #5d5d5d;
+    width: 60%;
+    padding: 8px;
+}
+ 
+input, textarea {
+    outline: none;
+    border: none;
+    border: solid 1px #f2f2f2;
+}
+
+h1, h2 {
+    font: normal 170% 'century gothic', arial;
+    margin: 0 0 15px 0;
+    padding: 15px 0 5px 0;
+    color: #000;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+a, a:hover {
+    outline: none;
+    text-decoration: underline;
+    color: #aeb002;
+}
+
+ul {
+    margin: 2px 0 22px 17px; /*чтобы были отступы у рейтинга*/
+}
+
+ul li {
+    margin: 0 0 6px 0; /*чотбы были отступы у рейтига*/
+    padding: 0 0 4px 5px;
+    line-height: 1.5em;
+}
+
+.header {
+    background-color: rgb(0, 0, 0); /*цвет фона*/
+    height: 177px;        /*высота нашего дива под класом header*/
+    font-size: 0.8em;    /*размер шрифта*/
+    margin-left: 0px;    /*отступ с лева*/
+    margin-right: 0px;  /*отступ с права*/
+    min-width: 900px;   /*Устанавливает минимальную ширину элемента*/
+}
+
+.main, .logo, .menubar, .site_content, .footer {
+    margin-left: auto; /*мы хотим чтобы отступ с лева и отступ с права был расчитан автаматически*/
+    margin-right: auto; /*мы хотим чтобы отступ с лева и отступ с права был расчитан автаматически*/
+}
+
+.logo {
+    width: 880px; /*это ширина с классом лого*/
+    padding-bottom: 40px; /*внутриний отступ с низу от элемента*/
+}
+
+.logo h1, .logo h2 {
+    font: normal 300% 'century gothic', arial, sans-serif; /*шрифт текста*/
+    margin: 0 0 0 9px; /*отступ сразу для двух заголовков*/
+}
+
+.logo_text h1, .logo_text h1 a, .logo_text h1 a:hover {
+    padding: 22px 0 0 0; 
+    color: #fff;
+    letter-spacing: 0.1em; /* интервал между символами*/
+    text-decoration: none; /* стиализует ссылку под тегом <a>*/
+}
+
+.logo_text h2 {
+    font-size: 0.9em;
+    padding: 4px 0 0 0;
+    color: #999;
+}
+
+.menubar { /*менюбар пишим для менюбара в html который, чтобы задать стиль*/
+    width: 900px;
+    height: 46px;
+}
+
+ul.menu {
+    float: right; /* флоат - означает что мы хотим прижать наш элемент к левому краю. Значение райд - прижать к правому краю*/
+}
+
+ul.menu li {
+float: left;
+padding: 0 0 0 9px;
+list-style: none; /* значит мы не хотим видеть точки перед каждым элементам ди*/
+margin: 1px 2px 0 0;
+}
+
+ul.menu li a {
+    font: normal 100% 'trebuchet ms', sans-serif;
+    display: block; /*означает что мы хотим превратить неблочный элемент в блочный*/
+    height: 20px;
+    padding: 6px 35px 5px 28px;
+    color: #fff;
+    text-decoration: none; /* прописывается чтобы небыло нижнего подчеркивания*/
+}
+
+ul.menu li.selected a { /* чтобы наши ссылке в шапке отличались от други*/
+    color: #aeb002
+}
+
+ul.menu li a:hover { /* при наведение на ссылку, она меняет цвет*/
+    color: #e4ec04;
+}
+
+
+hr {
+    border: solid 1px #f3f3f3; /*меняем цвет и форму линии hr*/ 
+}
+
+.site_content {
+    width: 880px;
+    overflow:hidden; /*чтобы скрыть контент выходящий за рамки задоного размера, чтобы отображалась область внутри нашего контента*/
+    margin: 20px auto 0 auto;
+    background-color: white;
+}
+
+.sidebar_container {
+    float: right;;
+    width: 224px;
+}
+
+.sidebar {
+    float: right;
+    width: 222px;
+    padding: 5%;
+    margin: 0 0 16px 0;
+    border: solid 1px #000000; /*это рамка вокруг блока с права*/    
+    border-radius: 5px; /*сделать углы закруглёнными*/
+    background-color: #f9f9f9;
+}
+
+.btn {
+    padding: 8px;
+    background-color: white;
+    cursor: pointer; /*чтобы при наведение на кп\нопку появлялся пальчик, чтобы понятно было что это кнопка*/
+}
+
+.sidebar h2 {
+    color: #00adff;
+}
+
+.lables_passreg_text {
+    font-size: 0.7em;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.sidebar ul {
+    margin: 0;
+}
+
+.sidebar ul li {
+    list-style-type: none;
+    margin: 0 0 0 0;
+}
+
+.sidebar .rating_sidebar {
+    float: right; /*чтобы рейтинг прижался к правому краю*/
+}
+
+.content {
+    text-align: left;
+    width: 620px;
+    padding: 0 0 0 5px;
+    float: left;
+}
+
+.content a {
+    text-decoration: none;/*чтобы небыло поддёркнута линии под ссылками*/
+}
+
+.films_block { /*для постеров*/
+    margin-bottom: 5%; /*отступ с низу*/
+}
+
+.films_block img { /*для постеров*/
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+    width: 22%;
+}
+
+.posts .posts_content {
+    font-size: 0.8em;
+}
+
+
+
+.info_film_page { /*все для нижних текстов под видео*/
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.info_film_page .label { /*все для нижних текстов под видео*/
+    font-size: 1.2em;
+}
+
+.info_film_page .value { /*все для нижних текстов под видео*/
+font-size: 1em;
+color: #49945a;
+margin-right: 3%;
+}
+
+.description_film { /*чтобы текст был напротив постера*/
+    margin-bottom: 15%;
+}
+
+.description_film img { /* чтобы текст был напротив*/
+    float: left; /*прижали к левому краю картинку*/
+    margin-right: 2%;
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+}
+
+.reviews { /*отзывы*/
+    margin-bottom: 4%;
+    font-size: 0.9em;
+}
+
+.reviews .review_name { /*отзывы*/
+background-color: #7268ad;
+color: white;
+padding: 1%;
+border-top-left-radius: 5px; /* скруглить сверху с лева угол один*/
+border-top-right-radius:5px;
+}
+
+.reviews .review_text { /*создаём отступы для коментария*/
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+}
+
+.send { /*задали отступ для всей странице*/
+    margin-bottom: 4%;
+}
+
+.send input[type="text"], textarea { /* форма отправки коментария*/
+border: solid 1px #c3c3c3;
+margin-bottom: 2%;
+}
+
+.send input[type="text"] { /* форма отправки коментария*/
+    width: 98%;
+}
+
+.send textarea { /* форма отправки коментария*/
+    width: 624px;
+    height: 200px;
+}
+
+.send input[type="submit"] { /* форма отправки коментария*/
+    background-color: #7268ad;
+    padding: 3%;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.footer { /*стиль для нижней шапки*/
+    width: 100%;
+    height: 100%;
+    padding: 28px 0 5px 0;
+    text-align: center; /*чтобы элемент был по центру (шапка с низу) */
+    background-color: rgb(0, 0, 0);
+    color: #a8aa94;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 900px; /*минимальная длина нашего элемента (шапка с низу) когда будем его сварачивать*/
+}
+
+
+.info_film { /*обработка текста возле постора*/
+    margin-bottom: 5%; /* тступы текста*/
+    background-color: #f9f9f9; /*цвет текста*/
+    padding: 5%; /* внутриний отступ*/
+    height: 270px; /*чтобы всегда был одной высоты*/
+}
+
+.info_film img { /*параметры для картинки задаются */
+    float: left;
+    margin-right: 2%;
+    border-bottom: 5px; /*скругление углов*/
+    border: solid 5px #dad7d5; /* цвет рамки*/
+    width: 25%; /*ширина*/
+}
+
+.button { /*стиль для кнопки*/
+    background-color: #7268ad; /*цвет фона*/
+    padding: 2%; /* отступы*/
+    color: white; /* цвет кнопки*/
+    border-radius: 5px; /*скругление углов*/
+    float: right; /*прижимаем к правому краю*/
+    margin-top: 5%; /*отступ с верху*/
+    clear: both; /*чтобы кнопка на не уползала в верх, если мало текста*/
+    font-size: 0.8em; /*размер шрифта*/
+}
+
+.button a {/* задаем цвет букв на нашей кнопки в списке фильмов*/
+    color: white;
+}
+
+
+table { /*стиль для нашей странице рейтингов*/
+    width: 100%;
+    border: solid 1px #f4f4f4;
+}
+
+td { /*стили для странице рейтингов*/
+    padding: 2%;
+    border: solid 1px #f4f4f4;
+}
+
+td img {
+    width: 60px;
+    vertical-align: middle;
+}
+
+.center { /*чтобы весь текст на странице рейтинг, около постера был по центру*/
+    text-align: center;
+}
+
+.rating { /*указываем для рейтига, цифр жирный шрифт*/
+    font-weight: bold; /*жирный шрифт*/
+}
+
+.footer a { /*стиль для нижней шапки*/
+    color: #a8aa94;
+    text-decoration: none;
+}
+
+.footer a:hover { /*стиль для нижней шапки*/
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer p { /*стиль для нижней шапки*/
+    padding: 0 0 10px 0;
+}
+
+ 
+/*CSS MOBAIL все функции для телефона*/ 
+
+@media only screen 
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+     
+    .header {
+        background-color: rgb(0, 0, 0); /*цвет шапки на мобильном устройстве*/
+        min-width: 100%; /*растягивае на весь экран*/
+        height: 20%;
+        text-align: center;
+    }
+.logo {
+    width: 100%;
+}
+
+.site_content {
+    width: 100%;
+}
+
+.menubar {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+.site_content {
+    width: 100%;
+    text-align: center; /*чтобы весь текст сайта на талефоне отображался по центру*/
+}
+
+.sidebar_container {
+    display: none; /*спомощью этого свойства можно скрыть любой контент*/
+}
+
+.footer {
+    display: none; /*скрыли подвал (нижнию шапку)*/
+}
+
+ul.menu {
+    float: none; /*никуда ничего не прижимать*/
+}
+
+ul.menu li {
+    margin: 0; /*тем самым отменяем все отступы*/
+    padding: 0; /*отменяем все внутриние отступы*/
+    float: none; /*запрещаем прижимать к какому либо краю*/
+}
+
+.logo h1 { /*чтобы заголовок на телефоне не выходил за края*/
+    font: normal 235% 'century gothic', arial, sans-serif;
+}
+
+.logo h2 { /*чтобы заголовок на телефоне не выходил за края*/
+    font: normal 100% 'century gothic', arial, sans-serif;
+    color: white;
+}
+
+.content h1, h2 {
+    font: normal 110% 'century gothic', arial;
+}
+
+.films_block img {
+    width:  43%;
+}
+
+.posts_content p { /*данные команды задаются чтобы текст под посторами на шлавной странице был аккуратным*/
+    line-height: 1.5em;
+    font-size: 100%;
+    padding: 3%;
+    text-align: left;
+}
+
+.posts p { /*чтобы текст был аккуртным*/
+    font-size: 120%;
+}
+
+/* films page */
+
+.info_film { /*высота текста, чтобы на телефоне текст при просмотре каталога фильма, не ложился друг на друга*/
+    float: none;
+    height: 100%;
+}
+
+.info_film img {
+    width: 90%;
+    margin-bottom: 5%; /*чтобы не прилипал текст к картинкам*/
+}
+
+.button {
+    float: none;
+}
+
+/* raiting page */
+
+table { /*для странице рейтинга*/
+    display: block;
+}
+
+th {
+    font-size: 75%;
+}
+
+td {
+    padding: 0;
+    margin: 0;
+    font-size: 95%;
+    text-align: left; /*чтобы текст который по центру, сместился на ровне со всеми*/    
+}
+
+/* show page для странице с фильмом */
+iframe {
+    width: 88%;
+    height: 100%;
+}
+
+.description_film {
+    width:90%;
+    text-align: left; /*чтобы текст прижался к левому краю*/
+    margin-left: 2%;
+}
+
+.description_film img {
+    float: none; /*чтобы картинка никуда не прижималась*/
+    width: 73%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-left: 11%;
+    margin-bottom: 7%;
+}
+
+.reviews { /*делаем форму отзывов компактной*/
+    text-align: left;
+    width: 97%;
+}
+
+.send input[type="text"] { /*форма отзывов*/
+    width: 80%;
+}
+
+.send textarea { /*форма отзывов*/
+    width: 85%;
+}
+
+}
